@@ -9,7 +9,7 @@ def openCSV(filename):
         reader = csv.reader(f, delimiter=';')
         for row in reader:
             # if we do not have 21 columns in the line skip it
-            if(len(row) > 21):
+            if(len(row) == 22):
                 # print the first line without evaluation of the 19th column
                 if(row[19] == "Betrag"):
                     concatColumn(row,0,4,";")
